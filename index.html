@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css
-">
-  <link rel="stylesheet" href="General.css">
-  <Script src="jspdf.min.js"></Script>
-  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
-  <script src="ControlPDF.js"></script>
-</head>
-<body>
-  <header>
-    <img src="logo.jpeg" alt="">
-  </header>
-  <div class="tarjeta">
-    <section>
-      <h1>Datos Prestamo</h1>
-    </section>
-    <hr>
-    <div class="prestamo-info">
-      <label for=""class="prestamo-info__diseño">Monto Solicitado RD$</label>
-      <input type="text">
-      <label for=""class="prestamo-info__diseño">Plazo</label>
-      <input type="text">
-      <br>
-      <label for=""class="prestamo-info__diseño">Adquisicion de vehiculo</label>
-      <br>
-      <input type="radio">Nuevo
-      <input type="radio">Usado
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css
+"
+    />
+    <script src="jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+    <script src="ControlPDF.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="logo.jpeg" alt="" />
+    </header>
 
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-ml-8 offset-md-2">
+          <h3>Datos Prestamo</h3>
+          <hr />
+          <form id="formulario">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="Monto_Solicitado" class="form-label">Monto Solicitado</label>
+                <input type="text" id="MontoSolicitado" class="form-control" />
+              </div>
+              <div class="col-md-6">
+                <label for="Plazo" class="form-label">Plazo</label>
+                <input type="text" id="Plazo" class="form-control" />
+              </div>
+            </div>
+                        <!--botones de seleccion-->
+            <center>
+                          <div class="row mb-3">
+                <label for="aquisicion">Adquisicion de vehiculo</label>
+              <div class="col-mb-3">
+                <div class="form-check form-check-inline">
+                  <input type="radio" name="adquisicion"class="form-check-input"id="adquisicion-nueva" value="1"/>
+                  <label for="adquisicion-nueva" class="form-check-label">Nuevo</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input type="radio"name="adquisicion"class="form-check-input"id="adquisicion-alqu"value="0"/>
+                  <label for="adquisicion-alqu" class="form-check-label">Alquilado</label>
+                </div>
+            </center>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    
-  </div>
- 
-
-
-</body>
+  </body>
 </html>
