@@ -26,20 +26,21 @@
           <hr />
           <form id="formulario">
             <div class="row mb-3">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="Monto_Solicitado" class="form-label">Monto Solicitado</label>
                 <input type="text" id="MontoSolicitado" class="form-control" />
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="Plazo" class="form-label">Plazo</label>
                 <input type="text" id="Plazo" class="form-control" />
               </div>
             </div>
-                        <!--botones de seleccion-->
+            <!--botones de seleccion-->
             <center>
-                          <div class="row mb-3">
+            <div class="row mb-3">
                 <label for="aquisicion">Adquisicion de vehiculo</label>
-              <div class="col-mb-3">
+
+                <div class="col-mb-3">
                 <div class="form-check form-check-inline">
                   <input type="radio" name="adquisicion"class="form-check-input"id="adquisicion-nueva" value="1"/>
                   <label for="adquisicion-nueva" class="form-check-label">Nuevo</label>
@@ -49,10 +50,222 @@
                   <input type="radio"name="adquisicion"class="form-check-input"id="adquisicion-alqu"value="0"/>
                   <label for="adquisicion-alqu" class="form-check-label">Alquilado</label>
                 </div>
-            </center>
 
+              </div> 
+            </div> 
+          </center>
+          <div class="row mb-3"> <!--Area Descripcion Behiculo-->
+            <h3>Datos Prestamo</h3>
+            <hr />
+            <div class="col-md-4">
+              <label for="Dealer" class="form-label">Concesionario o Dealer</label>
+              <input type="text" id="Dealer" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="Vendedor" class="form-label">Vendedor</label>
+              <input type="text" id="Vendedor" class="form-control" />
+            </div>
+            <div class="col-md-2">
+              <label for="valor_compra" class="form-label">Valor Compra RD$</label>
+              <input type="number" id="valor_compra" class="form-control" />
+            </div>
+          </div>
+          <div class="row mb-3"> 
+            <div class="col-md-2">
+              <label for="Inicial_RD$" class="form-label">Inicial RD$</label>
+              <input type="number" id="Inicial_RD$" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <label for="dat_vehiculo" class="form-label">Marca: Modelo: Tipo</label>
+              <input type="text" id="dat_vehiculo" class="form-control" />
+            </div>
+            <div class="col-md-3">
+              <label for="motor_vehiculo" class="form-label">Motor</label>
+              <input type="text" id="motor_vehiculo" class="form-control" />
+            </div>
+          </div>
+          <div class="row mb-3"> 
+            <div class="col-md-4">
+              <label for="Chasis" class="form-label">Chasis</label>
+              <input type="text" id="Chasis" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="Capacidad" class="form-label">Capacidad</label>
+              <input type="text" id="Capacidad" class="form-control" />
+            </div>
+            <div class="col-md-2">
+              <label for="año" class="form-label">año</label>
+              <input type="number" id="año" class="form-control" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="color_vehiculo" class="form-label">Color</label>
+              <input type="text" id="color_vehiculo" class="form-control" />
+            </div>         
+            <div class="col mt-4">
+             
+              <center> 
+              <label for="tipo_Uso">Para Uso:</label>
+              <div class="col-mb-3">
+                <div class="form-check form-check-inline">
+                 <input type="radio" name="tipo_Uso_"class="form-check-input"id="tipo_Uso_Familiar" value="1"/>
+                 <label for="tipo_Uso_Familiar" class="form-check-label">Familiar</label>
+               </div>
+
+                <div class="form-check form-check-inline">
+                 <input type="radio"name="tipo_Uso_"class="form-check-input"id="tipo_Uso_Comercial"value="2"/>
+                 <label for="tipo_Uso_Comercial" class="form-check-label">Comercial</label>
+               </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio"name="tipo_Uso_"class="form-check-input"id="tipo_Uso_Transporte"value="3"/>
+                  <label for="tipo_Uso_Transporte" class="form-check-label">Transporte</label>
+               </div>
+              </div>
+            </div> 
+            </center>
+            <div class="row mt-5"> <!--Datos solicitante-->
+              <h3>Datos Prestamo</h3>
+              <hr />
+              <div class="col-md-4">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" />
+              </div>
+              <div class="col-md-4">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" id="apellido" class="form-control" />
+              </div>
+              <div class="col-md-2">
+                <label for="Apodo" class="form-label">Apodo</label>
+                <input type="text" id="Apodo" class="form-control" />
               </div>
             </div>
+            <div class="row mt-4"> 
+              <div class="col-md-4">
+                <label for="cedula" class="form-label">Cedula NO.</label>
+                <input type="number" id="cedula" class="form-control" />
+              </div>
+              <div class="col-md-4">
+                <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                <input type="text" id="nacionalidad" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label for="eCivil" class="form-label">Estado Civil</label>
+                <select class="form-select" id="eCivil">
+                  <option value="">--Seleccione Estado Civil--</option>
+                  <option value="Casado (a)">Casado (a)</option>
+                  <option value="Soltero (a)">Soltero (a)</option>
+                  <option value="Union Libre (a)">Union Libre (a)</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-4"> 
+              <div class="col-md-4">
+                <label for="edad" class="form-label">Edad</label>
+                <input type="number" id="edad" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label for="gEducacion" class="form-label">Grado de Educacion</label>
+                <select class="form-select" id="gEducacion">
+                  <option value="">--Seleccione Grado de Educativo--</option>
+                  <option value="tecnico">Tecnico</option>
+                  <option value="bachiller">Bachiller</option>
+                  <option value="Universitario">Universitario</option>
+                  <option value="Licenciatura">Licenciatura</option>
+                  <option value="doctorado">Doctorado</option>
+                  <option value="ninguna">Ninguna de las anteriores</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="dependientes" class="form-label">NO. Dependientes</label>
+                <input type="number" id="dependientes" class="form-control" />
+              </div>
+            </div>
+
+            <div class="row mt-4"> 
+              <div class="col-md-4">
+                <label for="ocupacion" class="form-label">Ocupacion</label>
+                <input type="text" id="ocupacion" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <center>
+                <label for="aquisicion">Vivienda</label>
+                  <div class="col-mb-3">
+                <div class="form-check form-check-inline">
+                  <input type="radio" name="vivienda"class="form-check-input"id="vivienda-propia" value="1"/>
+                  <label for="vivienda-propia" class="form-check-label">Propia</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio"name="vivienda"class="form-check-input"id="vivienda-alqu"value="0"/>
+                  <label for="vivienda-alqu" class="form-check-label">Alquilada</label>
+                </div>
+               </div> 
+                </center>
+               </div>
+               <div class="col-md-4">
+                <label for="añoVivienda" class="form-label">Año de permanencia en la vivienda</label>
+                <input type="text" id="añoVivienda" class="form-control" />
+              </div>
+
+            </div>
+            <div class="row mt-5"> 
+              <div class="col-md-5">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" id="direccion" class="form-control" />
+              </div>
+              <div class="col-md-5">
+                <label for="direccion_secundaria" class="form-label">Direccion Linea 2</label>
+                <input type="text" id="direccion_secundaria" class="form-control" />
+              </div>
+            </div>
+
+            <div class="row mt-5"> 
+              <div class="col-md-4">
+                <label for="sector" class="form-label">Sector</label>
+                <input type="text" id="sector" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label for="tel_recidencia" class="form-label">Tel. Res</label>
+                <input type="number" id="tel_recidencia" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label for="Celular" class="form-label">Celular</label>
+                <input type="number" id="direccion_secundaria" class="form-control" />
+              </div>
+            </div>
+            <div class="row mt-5"> 
+              <div class="col mb-2">
+                <label for="aquisicion">Propio o Alquilado</label>
+
+                <div class="col-mb-3">
+                <div class="form-check form-check-inline">
+                  <input type="radio" name="propio_alquilado"class="form-check-input"id="si" value="1"/>
+                  <label for="propio_alquilado" class="form-check-label">Si</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input type="radio"name="propio_alquilado"class="form-check-input"id="si"value="0"/>
+                  <label for="si" class="form-check-label">No</label>
+                </div>
+              </div> 
+            </div>
+              <div class="col-md-2">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" id="marca" class="form-control" />
+              </div>
+              <div class="col-md-2">
+                <label for="modelo" class="form-label">Modelo</label>
+                <input type="text" id="modelo" class="form-control" />
+              </div>
+              <div class="col-md-2">
+                <label for="Celular" class="form-label">Año</label>
+                <input type="number" id="direccion_secundaria" class="form-control" />
+              </div>
+            </div>
+            <label for="" class="mt-4">Si es empreza Propia:</label>
+
+            
+          </div>
           </form>
         </div>
       </div>
