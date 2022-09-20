@@ -1,3 +1,4 @@
+
 function loadImage(url) {
   return new Promise(resolve => {
       const xhr = new XMLHttpRequest();
@@ -68,17 +69,57 @@ window.addEventListener('load', async () => {
       let email_cony = document.getElementById('email_cony').value;
 
 
-      generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony);
+      //Segunda Pagina
+      let nombre2 = document.getElementById('nombre').value;
+      let Nombre_fam = document.getElementById('Nombre_fam').value;
+      let Parentesco_fam = document.getElementById('Parentesco_fam').value;
+      let Direcion_fam = document.getElementById('Direcion_fam').value;
+      let tel_fam = document.getElementById('tel_fam').value;
+      let Nombre_fam2 = document.getElementById('Nombre_fam2').value;
+      let parentesco_fam2 = document.getElementById('parentesco_fam2').value;
+      let Direcion_fam2 = document.getElementById('Direcion_fam2').value;
+      let tel_fam2 = document.getElementById('tel_fam2').value;
+      let Nombre_fam3 = document.getElementById('Nombre_fam3').value;
+      let parentesco_fam3 = document.getElementById('parentesco_fam3').value;
+      let Direcion_fam3 = document.getElementById('Direcion_fam3').value;
+      let tel_fam3 = document.getElementById('tel_fam3').value;
+    //tabla 2 
+    let Nombre_apellido_Prestamo = document.getElementById('Nombre_apellido_Prestamo').value;
+    let Fecha = document.getElementById('Fecha').value;
+    let Monto_prestado = document.getElementById('Monto_prestado').value;
+    let pago_mensual = document.getElementById('pago_mensual').value;
+    let fecha_Vencimiento = document.getElementById('fecha_Vencimiento2').value;
+
+    let Nombre_apellido_Prestamo2 = document.getElementById('Nombre_apellido_Prestamo2').value;
+    let Fecha2 = document.getElementById('Fecha2').value;
+    let Monto_prestado2 = document.getElementById('Monto_prestado2').value;
+    let pago_mensual2 = document.getElementById('pago_mensual2').value;
+    let fecha_Vencimiento2 = document.getElementById('fecha_Vencimiento2').value;
+
+    let Nombre_apellido_Prestamo3 = document.getElementById('Nombre_apellido_Prestamo3').value;
+    let Fecha3 = document.getElementById('Fecha3').value;
+    let Monto_prestado3 = document.getElementById('Monto_prestado3').value;
+    let pago_mensual3 = document.getElementById('pago_mensual3').value;
+    let fecha_Vencimiento3 = document.getElementById('fecha_Vencimiento3').value;
+
+    
+      generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
+        nombre2,Nombre_fam,Parentesco_fam,Direcion_fam,tel_fam,Nombre_fam2,parentesco_fam2,Direcion_fam2,tel_fam2,Nombre_fam3,parentesco_fam3,Direcion_fam3,tel_fam3
+        ,Nombre_apellido_Prestamo,Nombre_apellido_Prestamo2,Nombre_apellido_Prestamo3,Fecha,Fecha2,Fecha3,Monto_prestado,Monto_prestado2,Monto_prestado3,pago_mensual,pago_mensual2,pago_mensual3,fecha_Vencimiento,fecha_Vencimiento2,fecha_Vencimiento3);
   })
 
 });
 
-async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony) {
+async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
+    nombre2,Nombre_fam,Parentesco_fam,Direcion_fam,tel_fam,Nombre_fam2,parentesco_fam2,Direcion_fam2,tel_fam2,Nombre_fam3,parentesco_fam3,Direcion_fam3,tel_fam3
+    ,Nombre_apellido_Prestamo,Nombre_apellido_Prestamo2,Nombre_apellido_Prestamo3,Fecha,Fecha2,Fecha3,Monto_prestado,Monto_prestado2,Monto_prestado3,pago_mensual,pago_mensual2,pago_mensual3,fecha_Vencimiento,fecha_Vencimiento2,fecha_Vencimiento3) {
   const image = await loadImage("page01.jpg");
 
   const pdf = new jsPDF('p', 'pt', 'letter');
 
   pdf.addImage(image, 'PNG', 0, 0, 565, 792);
+
+
 
   pdf.setFontSize(12);
 
@@ -145,6 +186,50 @@ pdf.text(email_cony,320 ,727);//
     }else{
         pdf.circle(141,385,4,'FD');
     }
+
+  
+  //Nueva pagina #Page020
+  pdf.addPage('letter','p');
+  const imh2 =await loadImage("page02.jpg")
+  pdf.addImage(imh2, 'PNG', 0, 0, 565, 792);
+
+    pdf.setFontSize(12);
+    pdf.text(nombre2, 360, 30);//
+    //tabla 1 pagina 2
+    pdf.text(Nombre_fam, 30, 90);//
+    pdf.text(Parentesco_fam, 161, 90);//
+    pdf.text(Direcion_fam, 287, 90);//
+    pdf.text(tel_fam, 417, 90);//
+
+    pdf.text(Nombre_fam2, 30, 115);//
+    pdf.text(parentesco_fam2, 161, 115);//
+    pdf.text(Direcion_fam2, 287, 115);//
+    pdf.text(tel_fam2, 417, 115);//
+
+    pdf.text(Nombre_fam3, 30, 138);//
+    pdf.text(parentesco_fam3, 161, 138);//
+    pdf.text(Direcion_fam3, 287, 138);//
+    pdf.text(tel_fam3, 417, 138);//
+    //tabla 2 pagina 2 
+    pdf.text(Nombre_apellido_Prestamo, 30, 210);//
+    pdf.text(Fecha, 150, 210);//
+    pdf.text(Monto_prestado, 240, 210);//
+    pdf.text(pago_mensual, 360, 210);//
+    pdf.text(fecha_Vencimiento, 470, 210);//
+
+ 
+    pdf.text(Nombre_apellido_Prestamo2, 30, 234);//
+    pdf.text(Fecha2, 150, 234);//
+    pdf.text(Monto_prestado2, 240, 234);//
+    pdf.text(pago_mensual2, 360, 234);//
+    pdf.text(fecha_Vencimiento2, 470, 234);//
+
+
+    pdf.text(Nombre_apellido_Prestamo3, 30, 257);//
+    pdf.text(Fecha3, 150, 257);//
+    pdf.text(Monto_prestado3, 240, 257);//
+    pdf.text(pago_mensual3, 360, 257);//
+    pdf.text(fecha_Vencimiento3, 470, 257);//
 
   pdf.save("example.pdf");
 
