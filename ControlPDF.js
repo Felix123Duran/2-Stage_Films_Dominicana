@@ -344,7 +344,13 @@ pdf.text(email_cony,320 ,727);//
       pdf.text(Direcion_fam3garante, 287, 760);//
       pdf.text(tel_fam3garante, 417, 760);//
 
+
       
+  //Nueva pagina #Page020
+  pdf.addPage('letter','p');
+  const img3 =await loadImage("page03.jpg")
+  pdf.addImage(img3, 'PNG', 0, 0, 565, 792);
+
   pdf.save("example.pdf");
 
 }
