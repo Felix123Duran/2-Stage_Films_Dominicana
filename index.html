@@ -313,8 +313,8 @@
                 <center> <label for="direccion_tuE" class="form-label">Direccion</label></center>
                 <input type="text" id="direccion_e" class="form-control" />
               </div>
-            </div>
-            <div class="row mt-4"> 
+              </div>
+             <div class="row mt-4"> 
               <div class="col-md-3">
                <label for="saldo_mensual" class="form-label">Sueldo Mensual RD$</label>
                 <input type="text" id="saldo_mensual" class="form-control" />
@@ -651,7 +651,424 @@
                   <input type="text" id="email_cony" class="form-control" />
                 </div>
               </div>
+               <!--Segunda Pagina -->
+              <div class="row mb-3"> <!--Area Descripcion Behiculo-->
+                <h3>Datos Garante Solidario</h3>
+                <hr />
+                <div class="col-md-4">
+                  <label for="Dealer" class="form-label">Nombre Y Apellido</label>
+                  <input type="text" id="GaranteNom" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                  <label for="Vendedor" class="form-label">Apodo</label>
+                  <input type="text" id="GaranteApodo" class="form-control" />
+                </div>
+                <div class="col-md-2">
+                  <label for="valor_compra" class="form-label">Cedula No.</label>
+                  <input type="number" id="CedulaGarante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mb-3"> 
+                <div class="col-md-4">
+                  <label for="Dealer" class="form-label">Nacionalidad</label>
+                  <input type="text" id="GaranteNacionalidad" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                  <label for="eCivil" class="form-label">Estado Civil</label>
+                  <select class="form-select" id="eCivil_garante">
+                    <option value="">--Seleccione Estado Civil--</option>
+                    <option value="Casado (a)">Casado (a)</option>
+                    <option value="Soltero (a)">Soltero (a)</option>
+                    <option value="Union Libre (a)">Union Libre (a)</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="valor_compra" class="form-label">edad</label>
+                  <input type="number" id="edadGarante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mb-3"> 
+                <div class="col-md-4">
+                  <label for="Dealer" class="form-label">Ocupacion</label>
+                  <input type="text" id="OcupacionGarante" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                  <label for="gEducacion" class="form-label">Grado de Educacion</label>
+                  <select class="form-select" id="gEducacionGarante">
+                    <option value="">--Seleccione Grado de Educativo--</option>
+                    <option value="Tecnico">Tecnico</option>
+                    <option value="Bachiller">Bachiller</option>
+                    <option value="Universitario">Universitario</option>
+                    <option value="Licenciatura">Licenciatura</option>
+                    <option value="Doctorado">Doctorado</option>
+                    <option value="Ninguna de los">Ninguna de las anteriores</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="valor_compra" class="form-label">No. Dependientes</label>
+                  <input type="number" id="dependientes_Garante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mb-3"> <!--Area Descripcion Behiculo-->
+                <div class="col-md-4">
+                  <label for="Dealer" class="form-label">Sueldo Mensual RD$:</label>
+                  <input type="text" id="sueldoMenGarante" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                  <label for="Vendedor" class="form-label">Otros Ingresos RD$:</label>
+                  <input type="text" id="otrosIngre_garante" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                  <center>
+                  <label for="aquisicion">Vivienda</label>
+                    <div class="col-mb-3">
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="viviendaGarante"class="form-check-input"id="vivienda-propiaGarante" value="1"/>
+                    <label for="vivienda-propia" class="form-check-label">Propia</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input type="radio"name="viviendaGarante"class="form-check-input"id="vivienda-alquGarante"value="2"/>
+                    <label for="vivienda-alqu" class="form-check-label">Alquilada</label>
+                  </div>
+                 </div>
+              </div>
+              <div class="row mb-4"> 
+                <div class="col-md-4">
+                  <label for="Dealer" class="form-label">Pago Mensual</label>
+                  <input type="text" id="PagoMenGarante" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                  <label for="Vendedor" class="form-label">Año de permanencia en la vivienda</label>
+                  <input type="text" id="añoViviendaGarante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mb-4"> 
+                <div class="col-md-10">
+                  <label for="Dealer" class="form-label">Direccion</label>
+                  <input type="text" id="direccionGarante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mb-"> 
+                <div class="col-md-4">
+                  <label for="Dealer" class="form-label">sector</label>
+                  <input type="text" id="sectorGarante" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                  <label for="Vendedor" class="form-label">Tel. Res</label>
+                  <input type="text" id="telGarante" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                  <label for="Vendedor" class="form-label">Celular</label>
+                  <input type="text" id="celularGarante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mt-5"> 
+                <div class="col mb-2">
+                  <label for="aquisicion">Vehiculo</label>
+  
+                  <div class="col-mb-3">
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="propio_alquiladoGarante"class="form-check-input"id="propioGarante" value="1"/>
+                    <label for="propio_alquilado" class="form-check-label">Propio</label>
+                  </div>
+  
+                  <div class="form-check form-check-inline">
+                    <input type="radio"name="propio_alquiladoGarante"class="form-check-input"id="alquiladoGarante"value="2"/>
+                    <label for="propio_alquilado" class="form-check-label">Akquilado</label>
+                  </div>
+                </div> 
+              </div>
+                <div class="col-md-2">
+                  <label for="marca" class="form-label">Marca</label>
+                  <input type="text" id="marcaGarante" class="form-control" />
+                </div>
+                <div class="col-md-2">
+                  <label for="modelo" class="form-label">Modelo</label>
+                  <input type="text" id="modeloGarante" class="form-control" />
+                </div>
+                <div class="col-md-2">
+                  <label for="año" class="form-label">Año</label>
+                  <input type="number" id="año_carroGarante" class="form-control" />
+                </div>
+              </div>
+              <div class="row mt-6"> <!-- TABLA UNO---->
+                <label for="" class="mb-4 mt-4">Tres (3) Familiares cercanos que no vivan con usted:</label>
 
+                <table class="default">
+
+                  <tr>
+                    <th >Nombres y Apellidos</th>
+                    <th>Parentesco</th>
+                    <th>Dirección</th>
+                    <th>Telefono(s)</th>
+                  </tr>
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Nombre_fam" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Parentesco_fam" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Direcion_fam" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="tel_fam" class="form-control" />
+                      </div>
+                    </td>
+                
+                  </tr>
+                
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10 mt-2">
+                        <input type="text" id="Nombre_fam2" class="form-control" />
+                      </div>
+                    </td>                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="parentesco_fam2" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Direcion_fam2" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="tel_fam2" class="form-control" />
+                      </div>
+                    </td>
+                
+                  </tr>
+                
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10 mt-2">
+                        <input type="text" id="Nombre_fam3" class="form-control" />
+                      </div>
+                    </td> 
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="parentesco_fam3" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Direcion_fam3" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="tel_fam3" class="form-control" />
+                      </div>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </div>
+              <div class="row mt-6"> <!-- TABLA dos---->
+                <label for="" class="mb-4 mt-4">Préstamos concedidos:</label>
+
+                <table class="default">
+
+                  <tr>
+                    <th >Nombre y Apellido</th>
+                    <th>Fecha</th>
+                    <th>Institucion</th>
+                    <th>Pago mensual</th>
+                    <th>Fecha de vencimiento</th>
+
+                  </tr>
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Nombre_apellido_Prestamo" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Fecha" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Monto_prestado" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="pago_mensual" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="fecha_Vencimiento" class="form-control" />
+                      </div>
+                    </td>
+                
+                  </tr>
+                
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Nombre_apellido_Prestamo2" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Fecha2" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Monto_prestado2" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="pago_mensual2" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="fecha_Vencimiento2" class="form-control" />
+                      </div>
+                    </td>
+                
+                  </tr>
+                
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Nombre_apellido_Prestamo3" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Fecha3" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Monto_prestado3" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="pago_mensual3" class="form-control" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="fecha_Vencimiento3" class="form-control" />
+                      </div>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </div>
+              <div class="row mt-6"> <!-- TABLA tercera---->
+                <label for="" class="mb-4 mt-4">Cuentas en Bancos:</label>
+
+                <table class="default">
+
+                  <tr>
+                    <th >Tipo de Cuenta:</th>
+                    <th>No. de Cuentas</th>
+                    <th>Banco</th>
+                  </tr>
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Tipo_Cuenta" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="No_Cuentas" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Banco" class="form-control" />
+                      </div>
+                    </td>
+                  </tr>
+                
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Tipo_Cuenta2" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="No_Cuentas2" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Banco2" class="form-control" />
+                      </div>
+                    </td>
+                  </tr>
+                
+                  <tr>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Tipo_Cuenta3" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="No_Cuentas3" class="form-control" />
+                      </div>
+                    </td>
+                
+                    <td>
+                      <div class="col-md-10">
+                        <input type="text" id="Banco3" class="form-control" />
+                      </div>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </div>
             </div>
                  <button type="submit" class="btn btn-primary mt-5 mb-4">Pasar a PDF</button>
           </form>
