@@ -150,13 +150,33 @@ window.addEventListener('load', async () => {
 
     //Pagina #03
     let nombre3 = document.getElementById('nombre').value;
+    
+    let Nombre_apellido_PrestamoGarante = document.getElementById('Nombre_apellido_PrestamoGarante').value;
+    let FechaPrestamoGarante = document.getElementById('FechaPrestamoGarante').value;
+    let Monto_prestadoGarante = document.getElementById('Monto_prestadoGarante').value;
+    let pago_mensualPrestamoGarante = document.getElementById('pago_mensualPrestamoGarante').value;
+    let fecha_VencimientoPrestamoGarante = document.getElementById('fecha_VencimientoPrestamoGarante').value;
+
+    let Nombre_apellido_PrestamoGarante2 = document.getElementById('Nombre_apellido_PrestamoGarante2').value;
+    let FechaPrestamoGarante2 = document.getElementById('FechaPrestamoGarante2').value;
+    let Monto_prestadoGarante2 = document.getElementById('Monto_prestadoGarante2').value;
+    let pago_mensualPrestamoGarante2 = document.getElementById('pago_mensualPrestamoGarante2').value;
+    let fecha_VencimientoPrestamoGarante2 = document.getElementById('fecha_VencimientoPrestamoGarante2').value;
+    
+    let Nombre_apellido_PrestamoGarante3 = document.getElementById('Nombre_apellido_PrestamoGarante3').value;
+    let FechaPrestamoGarante3 = document.getElementById('FechaPrestamoGarante3').value;
+    let Monto_prestadoGarante3 = document.getElementById('Monto_prestadoGarante3').value;
+    let pago_mensualPrestamoGarante3 = document.getElementById('pago_mensualPrestamoGarante3').value;
+    let fecha_VencimientoPrestamoGarante3 = document.getElementById('fecha_VencimientoPrestamoGarante3').value;
+
+
 
       generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
         nombre2,Nombre_fam,Parentesco_fam,Direcion_fam,tel_fam,Nombre_fam2,parentesco_fam2,Direcion_fam2,tel_fam2,Nombre_fam3,parentesco_fam3,Direcion_fam3,tel_fam3
         ,Nombre_apellido_Prestamo,Nombre_apellido_Prestamo2,Nombre_apellido_Prestamo3,Fecha,Fecha2,Fecha3,Monto_prestado,Monto_prestado2,Monto_prestado3,pago_mensual,pago_mensual2,pago_mensual3,fecha_Vencimiento,fecha_Vencimiento2,fecha_Vencimiento3,
         Tipo_Cuenta,Tipo_Cuenta2,Tipo_Cuenta3,No_Cuentas,Banco,No_Cuentas2,Banco2,Banco3,No_Cuentas3,
         nombreGarante,GaranteApodo,CedulaGarante,GaranteNacionalidad,eCivil_garante,edadGarante,OcupacionGarante,gEducacionGarante,dependientes_Garante,sueldoMenGarante,otrosIngre_garante,viviendaGarante,PagoMenGarante,añoViviendaGarante,direccionGarante,sectorGarante,telGarante,celularGarante,propio_alquiladoGarante,marcaGarante,modeloGarante,año_carroGarante,Nombre_famgarante,Parentesco_famgarante,Direcion_famgarante,tel_famgarante,Nombre_fam2garante,Parentesco_fam2garante,Direcion_fam2garante,tel_fam2garante,Nombre_fam3garante,Parentesco_fam3garante,Direcion_fam3garante,tel_fam3garante,
-        nombre3);
+        nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3);
   })
 
 });
@@ -166,7 +186,7 @@ async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducaci
     ,Nombre_apellido_Prestamo,Nombre_apellido_Prestamo2,Nombre_apellido_Prestamo3,Fecha,Fecha2,Fecha3,Monto_prestado,Monto_prestado2,Monto_prestado3,pago_mensual,pago_mensual2,pago_mensual3,fecha_Vencimiento,fecha_Vencimiento2,fecha_Vencimiento3,
     Tipo_Cuenta,Tipo_Cuenta2,Tipo_Cuenta3,No_Cuentas,Banco,No_Cuentas2,Banco2,Banco3,No_Cuentas3,
     nombreGarante,GaranteApodo,CedulaGarante,GaranteNacionalidad,eCivil_garante,edadGarante,OcupacionGarante,gEducacionGarante,dependientes_Garante,sueldoMenGarante,otrosIngre_garante,viviendaGarante,PagoMenGarante,añoViviendaGarante,direccionGarante,sectorGarante,telGarante,celularGarante,propio_alquiladoGarante,marcaGarante,modeloGarante,año_carroGarante,Nombre_famgarante,Parentesco_famgarante,Direcion_famgarante,tel_famgarante,Nombre_fam2garante,Parentesco_fam2garante,Direcion_fam2garante,tel_fam2garante,Nombre_fam3garante,Parentesco_fam3garante,Direcion_fam3garante,tel_fam3garante,
-    nombre3) {
+    nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3) {
   const image = await loadImage("page01.jpg");
 
   const pdf = new jsPDF('p', 'pt', 'letter');
@@ -359,7 +379,25 @@ pdf.text(email_cony,320 ,727);//
 
   pdf.text(nombre3, 360, 30);//
 
-  
+  pdf.text(Nombre_apellido_PrestamoGarante, 30, 90);//
+  pdf.text(FechaPrestamoGarante, 148, 90);//
+  pdf.text(Monto_prestadoGarante, 244, 90);//
+  pdf.text(pago_mensualPrestamoGarante, 362, 90);
+  pdf.text(fecha_VencimientoPrestamoGarante,470 , 90);//
+
+  pdf.text(Nombre_apellido_PrestamoGarante2, 30, 115);//
+  pdf.text(FechaPrestamoGarante2, 148, 115);//
+  pdf.text(Monto_prestadoGarante2, 244, 115);//
+  pdf.text(pago_mensualPrestamoGarante2, 362, 115);
+  pdf.text(fecha_VencimientoPrestamoGarante2,470 , 115);//
+
+
+  pdf.text(Nombre_apellido_PrestamoGarante3, 30, 138);//
+  pdf.text(FechaPrestamoGarante3, 148, 138);//
+  pdf.text(Monto_prestadoGarante3, 244, 138);//
+  pdf.text(pago_mensualPrestamoGarante3, 362, 138);
+  pdf.text(fecha_VencimientoPrestamoGarante3,470 , 138);//
+
 
   pdf.save("example.pdf");
 
