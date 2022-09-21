@@ -169,14 +169,28 @@ window.addEventListener('load', async () => {
     let pago_mensualPrestamoGarante3 = document.getElementById('pago_mensualPrestamoGarante3').value;
     let fecha_VencimientoPrestamoGarante3 = document.getElementById('fecha_VencimientoPrestamoGarante3').value;
 
+      //tabla 2
+      let Tipo_CuentaGarante = document.getElementById('Tipo_CuentaGarante').value;
+      let No_CuentasGarante = document.getElementById('No_CuentasGarante').value;
+      let BancoGarante = document.getElementById('BancoGarante').value;
 
+      let Tipo_CuentaGarante2 = document.getElementById('Tipo_CuentaGarante2').value;
+      let No_CuentasGarante2 = document.getElementById('No_CuentasGarante2').value;
+      let BancoGarante2 = document.getElementById('BancoGarante2').value;
 
+      let Tipo_CuentaGarante3 = document.getElementById('Tipo_CuentaGarante3').value;
+      let No_CuentasGarante3 = document.getElementById('No_CuentasGarante3').value;
+      let BancoGarante3 = document.getElementById('BancoGarante3').value;
+
+      //datos conyugue
+      
       generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
         nombre2,Nombre_fam,Parentesco_fam,Direcion_fam,tel_fam,Nombre_fam2,parentesco_fam2,Direcion_fam2,tel_fam2,Nombre_fam3,parentesco_fam3,Direcion_fam3,tel_fam3
         ,Nombre_apellido_Prestamo,Nombre_apellido_Prestamo2,Nombre_apellido_Prestamo3,Fecha,Fecha2,Fecha3,Monto_prestado,Monto_prestado2,Monto_prestado3,pago_mensual,pago_mensual2,pago_mensual3,fecha_Vencimiento,fecha_Vencimiento2,fecha_Vencimiento3,
         Tipo_Cuenta,Tipo_Cuenta2,Tipo_Cuenta3,No_Cuentas,Banco,No_Cuentas2,Banco2,Banco3,No_Cuentas3,
         nombreGarante,GaranteApodo,CedulaGarante,GaranteNacionalidad,eCivil_garante,edadGarante,OcupacionGarante,gEducacionGarante,dependientes_Garante,sueldoMenGarante,otrosIngre_garante,viviendaGarante,PagoMenGarante,añoViviendaGarante,direccionGarante,sectorGarante,telGarante,celularGarante,propio_alquiladoGarante,marcaGarante,modeloGarante,año_carroGarante,Nombre_famgarante,Parentesco_famgarante,Direcion_famgarante,tel_famgarante,Nombre_fam2garante,Parentesco_fam2garante,Direcion_fam2garante,tel_fam2garante,Nombre_fam3garante,Parentesco_fam3garante,Direcion_fam3garante,tel_fam3garante,
-        nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3);
+        nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
+        Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3);
   })
 
 });
@@ -186,7 +200,8 @@ async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducaci
     ,Nombre_apellido_Prestamo,Nombre_apellido_Prestamo2,Nombre_apellido_Prestamo3,Fecha,Fecha2,Fecha3,Monto_prestado,Monto_prestado2,Monto_prestado3,pago_mensual,pago_mensual2,pago_mensual3,fecha_Vencimiento,fecha_Vencimiento2,fecha_Vencimiento3,
     Tipo_Cuenta,Tipo_Cuenta2,Tipo_Cuenta3,No_Cuentas,Banco,No_Cuentas2,Banco2,Banco3,No_Cuentas3,
     nombreGarante,GaranteApodo,CedulaGarante,GaranteNacionalidad,eCivil_garante,edadGarante,OcupacionGarante,gEducacionGarante,dependientes_Garante,sueldoMenGarante,otrosIngre_garante,viviendaGarante,PagoMenGarante,añoViviendaGarante,direccionGarante,sectorGarante,telGarante,celularGarante,propio_alquiladoGarante,marcaGarante,modeloGarante,año_carroGarante,Nombre_famgarante,Parentesco_famgarante,Direcion_famgarante,tel_famgarante,Nombre_fam2garante,Parentesco_fam2garante,Direcion_fam2garante,tel_fam2garante,Nombre_fam3garante,Parentesco_fam3garante,Direcion_fam3garante,tel_fam3garante,
-    nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3) {
+    nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
+    Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3) {
   const image = await loadImage("page01.jpg");
 
   const pdf = new jsPDF('p', 'pt', 'letter');
@@ -378,7 +393,7 @@ pdf.text(email_cony,320 ,727);//
   pdf.setFontSize(12);
 
   pdf.text(nombre3, 360, 30);//
-
+//tabla 1 pagina #03
   pdf.text(Nombre_apellido_PrestamoGarante, 30, 90);//
   pdf.text(FechaPrestamoGarante, 148, 90);//
   pdf.text(Monto_prestadoGarante, 244, 90);//
@@ -391,12 +406,25 @@ pdf.text(email_cony,320 ,727);//
   pdf.text(pago_mensualPrestamoGarante2, 362, 115);
   pdf.text(fecha_VencimientoPrestamoGarante2,470 , 115);//
 
-
   pdf.text(Nombre_apellido_PrestamoGarante3, 30, 138);//
   pdf.text(FechaPrestamoGarante3, 148, 138);//
   pdf.text(Monto_prestadoGarante3, 244, 138);//
   pdf.text(pago_mensualPrestamoGarante3, 362, 138);
   pdf.text(fecha_VencimientoPrestamoGarante3,470 , 138);//
+
+  //tabla #02 pagina #03
+  pdf.text(Tipo_CuentaGarante, 30, 209);//
+  pdf.text(No_CuentasGarante, 160, 209);//
+  pdf.text(BancoGarante, 417, 209);//
+
+  pdf.text(Tipo_CuentaGarante2, 30, 234);//
+  pdf.text(No_CuentasGarante2, 160, 234);//
+  pdf.text(BancoGarante2, 417, 234);//
+
+  pdf.text(Tipo_CuentaGarante3, 30, 257);//
+  pdf.text(No_CuentasGarante3, 160, 257);//
+  pdf.text(BancoGarante3, 417, 257);//
+
 
 
   pdf.save("example.pdf");
