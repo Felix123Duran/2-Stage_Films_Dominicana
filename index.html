@@ -12,7 +12,7 @@
     <script src="jspdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
     <script src="ControlPDF.js"></script>
-
+<link rel="stylesheet" href="diseño.css">
   </head>
   <body>
     <header>
@@ -21,10 +21,11 @@
 
     <div class="container mt-4">
       <div class="row">
-        <div class="col-ml-8 offset-md-1">
-          <h3>Datos Prestamo</h3>
-          <hr />
+        <div class="col-ml-8 ">
+
           <form id="formulario">
+           <h3>Datos Prestamo</h3>
+          <hr />
             <div class="row mb-3">
               <div class="col-md-4">
                 <label for="Monto_Solicitado" class="form-label">Monto Solicitado</label>
@@ -55,8 +56,6 @@
             </div> 
           </center>
           <div class="row mb-3"> <!--Area Descripcion Behiculo-->
-            <h3>Datos Prestamo</h3>
-            <hr />
             <div class="col-md-4">
               <label for="Dealer" class="form-label">Concesionario o Dealer</label>
               <input type="text" id="Dealer" class="form-control" />
@@ -122,11 +121,15 @@
                   <label for="tipo_Uso_Transporte" class="form-check-label">Transporte</label>
                </div>
               </div>
+              
             </div> 
             </center>
-            <div class="row mt-5"> <!--Datos solicitante-->
+            <div class="mt-4">
               <h3>Datos solicitante</h3>
               <hr />
+            </div>
+            <div class="row mt-5"> <!--Datos solicitante-->
+
               <div class="col-md-7">
                 <label for="nombre" class="form-label">Nombre y Apellido</label>
                 <input type="text" id="nombre" class="form-control" />
@@ -606,10 +609,10 @@
                   
                 </table>
               </div>
-
-              <div class="row mb-4"> 
                 <h3 class="mt-5">DATOS DEL CONYUGUE DEL SOLICITANTE</h3>
                 <hr />
+              <div class="row mb-4"> 
+
                 <div class="col-md-4">
                   <label for="nombre_apellido_cony" class="form-label">Nombre y Apellidos Cónyuge</label>
                   <input type="text" id="nombre_apellido_cony" class="form-control" />
@@ -652,9 +655,11 @@
                 </div>
               </div>
                <!--Segunda Pagina -->
-              <div class="row mb-3"> <!--Area Descripcion Behiculo-->
+
                 <h3>Datos Garante Solidario</h3>
                 <hr />
+              <div class="row mb-3"> <!--Area Descripcion Behiculo-->
+
                 <div class="col-md-4">
                   <label for="Dealer" class="form-label">Nombre Y Apellido</label>
                   <input type="text" id="GaranteNom" class="form-control" />
@@ -1228,7 +1233,7 @@
                           </div>
                         </div> 
                         <div class="mt-4">
-                          <textarea name="desc_garantia"id="desc_garantia" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                          <textarea name="desc_garantia"id="desc_garantia" rows="10" cols="40">Descripcuin de la garantia</textarea>
 
                         </div>
 
