@@ -211,6 +211,10 @@ window.addEventListener('load', async () => {
       let telTrabacoGarantee = document.getElementById('telTrabacoGarantee').value;
       let EmailCoyugue = document.getElementById('EmailCoyugue').value;
 
+      //Ultima tabla pagina #03
+      let datosGarantia = document.querySelector('input[name="datosGarantia"]:checked').value;
+      let desc_garantia = document.getElementById('desc_garantia').value;
+
       
       generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
         nombre2,Nombre_fam,Parentesco_fam,Direcion_fam,tel_fam,Nombre_fam2,parentesco_fam2,Direcion_fam2,tel_fam2,Nombre_fam3,parentesco_fam3,Direcion_fam3,tel_fam3
@@ -220,7 +224,7 @@ window.addEventListener('load', async () => {
         nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
         Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3,
         empreza_nombregARANTE,codigo_empleadoGarante,direccion_tuEGarante,tel_TrabajoGarante,email_trabajo_Garante,tiemp_emprezaGarante,empreza_contratoGarante,cargo_emprezaGarante,direccion_eGaranteE,Tiempo_servicioGarante,saldo_mensualGarante,tel_emprezaGarante,EMAILemprezaGarante,
-        garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue);
+        garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue,datosGarantia,desc_garantia);
   })
 
 });
@@ -233,7 +237,7 @@ async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducaci
     nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
     Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3,
     empreza_nombregARANTE,codigo_empleadoGarante,direccion_tuEGarante,tel_TrabajoGarante,email_trabajo_Garante,tiemp_emprezaGarante,empreza_contratoGarante,cargo_emprezaGarante,direccion_eGaranteE,Tiempo_servicioGarante,saldo_mensualGarante,tel_emprezaGarante,EMAILemprezaGarante,
-    garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue) {
+    garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue,datosGarantia,desc_garantia) {
   const image = await loadImage("page01.jpg");
 
   const pdf = new jsPDF('p', 'pt', 'letter');
@@ -487,6 +491,27 @@ pdf.text(email_cony,320 ,727);//
   pdf.text(EmailCoyugue, 320,633 );//
 
   
+  if(parseInt(datosGarantia)==1){
+    pdf.circle(235,664,4,'FD');
+
+  }else if(parseInt(datosGarantia)===2){
+    pdf.circle(352,664,4,'FD');
+
+  }else if(parseInt(datosGarantia)===3){
+    pdf.circle(415,664,4,'FD');
+
+  }else if(parseInt(datosGarantia)===4){
+    pdf.circle(480,664,4,'FD');
+
+  }
+  pdf.text(desc_garantia, 150,705 );//
+  pdf.addPage('letter','p');
+  const img4 =await loadImage("page04.jpg")
+  pdf.addImage(img4, 'PNG', 0, 0, 565, 792);
+  pdf.setFontSize(12);
+
+  pdf.text(nombre3, 360, 30);//
+
   pdf.save("example.pdf");
 
 }
