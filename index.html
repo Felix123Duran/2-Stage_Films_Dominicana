@@ -1074,18 +1074,18 @@
               <div class="row mt-4"> 
                 <div class="col-md-6">
                   <label for="empreza_nombre" class="form-label">Nombre de la empreza:</label>
-                  <input type="text" id="empreza_nombre" class="form-control" />
+                  <input type="text" id="empreza_nombregARANTE" class="form-control" />
                 </div>
                 <div class="col-md-4">
                   <label for="codigo_empleado" class="form-label">No. Empleados</label>
-                  <input type="text" id="codigo_empleado" class="form-control" />
+                  <input type="number" id="codigo_empleadoGarante" class="form-control" />
                 </div>
               </div>
               
               <div class="row mt-4"> 
                 <div class="col-md-10">
                   <center> <label for="direccion_tuE" class="form-label">Direccion</label></center>
-                  <input type="text" id="direccion_tuE" class="form-control" />
+                  <input type="text" id="direccion_tuEGarante" class="form-control" />
                 </div>
               </div>
   
@@ -1093,15 +1093,15 @@
   
                 <div class="col-md-3">
                   <label for="tel" class="form-label">Tel.</label>
-                  <input type="tel" id="tel" class="form-control" />
+                  <input type="tel" id="tel_TrabajoGarante" class="form-control" />
                 </div>
                 <div class="col-md-4">
                   <label for="email" class="form-label">E-mail</label>
-                  <input type="email" id="email" class="form-control" />
+                  <input type="email" id="email_trabajo_Garante" class="form-control" />
                 </div>
                 <div class="col-md-3">
                   <label for="tiemp_empreza" class="form-label">Tiempo en la empreza</label>
-                  <input type="text" id="tiemp_empreza" class="form-control" />
+                  <input type="number" id="tiemp_emprezaGarante" class="form-control" />
                 </div>
   
               </div>
@@ -1111,37 +1111,94 @@
               <div class="row mt-4"> 
                 <div class="col-md-6">
                   <label for="empreza_contrrato" class="form-label">Empreza que lo empleo:</label>
-                  <input type="text" id="empreza_contrato" class="form-control" />
+                  <input type="text" id="empreza_contratoGarante" class="form-control" />
                 </div>
                 <div class="col-md-4">
                   <label for="cargo" class="form-label">Cargo</label>
-                  <input type="text" id="cargo" class="form-control" />
+                  <input type="text" id="cargo_emprezaGarante" class="form-control" />
                 </div>
               </div>
             </div>
               <div class="row mt-4"> 
                 <div class="col-md-10">
                   <center> <label for="direccion_tuE" class="form-label">Direccion</label></center>
-                  <input type="text" id="direccion_e" class="form-control" />
+                  <input type="text" id="direccion_eGaranteE" class="form-control" />
                 </div>
                 </div>
                <div class="row mt-4"> 
-                <div class="col-md-3">
+                <div class="col-md-2">
+                  <label for="saldo_mensual" class="form-label">Tiempo en servicio</label>
+                   <input type="text" id="Tiempo_servicioGarante" class="form-control" />
+                 </div>
+                <div class="col-md-2">
                  <label for="saldo_mensual" class="form-label">Sueldo Mensual RD$</label>
-                  <input type="text" id="saldo_mensual" class="form-control" />
+                  <input type="text" id="saldo_mensualGarante" class="form-control" />
                 </div>
                 <div class="col-md-3">
                   <label for="tel" class="form-label">Tel.</label>
-                   <input type="tel" id="tel_empreza" class="form-control" />
+                   <input type="tel" id="tel_emprezaGarante" class="form-control" />
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-3">
                   <label for="email_e" class="form-label">E-mail</label>
-                   <input type="email" id="EMAIL" class="form-control" />
+                   <input type="email" id="EMAILemprezaGarante" class="form-control" />
                  </div>
                 </div>
-                <div class="row mt-6"> <!-- TABLA UNO---->
-                  <label for="" class="mb-4 mt-4">Tres (3) Familiares cercanos que no vivan con usted:</label>
-  
+
+                <div class="row mt-6"> 
+                  <div class="mt-4">
+                    <h3>Datos del Conyugue</h3>
+                    <hr />
+                  </div>
+
+                  <div class="col-md-8">
+                    <label for="tel" class="form-label">Parentesco y/o relacion con el solicitante</label>
+                     <input type="text" id="garanteParentes" class="form-control" />
+                   </div>
+
+                   <div class="row m-6">
+                   <div class="col-md-6">
+                    <label for="tel" class="form-label">Nombre apellido del conyugue</label>
+                     <input type="text" id="Nombre_apelliGarante" class="form-control" />
+                   </div>
+                   <div class="col-md-4">
+                    <label for="tel" class="form-label">Cedula</label>
+                     <input type="text" id="cedulaCony" class="form-control" />
+                   </div>
+                   </div>
+                   <div class="row m-6">
+                    <div class="col-md-6">
+                     <label for="tel" class="form-label">Nombre de la Empreza donde trabaja</label>
+                      <input type="text" id="emprezaCony" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                     <label for="tel" class="form-label">Sueldo Meensual RD$</label>
+                      <input type="text" id="sueldoCony" class="form-control" />
+                    </div>
+                    </div>
+                    <div class="row m-6">
+                      <div class="col-md-10">
+                       <label for="tel" class="form-label">Direccion</label>
+                        <input type="text" id="DireccionConyugeTrabajo" class="form-control" />
+                      </div>
+                      </div>
+                      <div class="row mt-6">
+                        <div class="col-md-2">
+                         <label for="tel" class="form-label">Cargo</label>
+                          <input type="text" id="CargoTrabajoCony" class="form-control" />
+                        </div>
+                        <div class="col-md-2">
+                         <label for="tel" class="form-label">Tiempo Servicio</label>
+                          <input type="text" id="tiempoServiciocony" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                          <label for="tel" class="form-label">tel</label>
+                           <input type="text" id="telTrabacoGarantee" class="form-control" />
+                         </div>
+                         <div class="col-md-4">
+                          <label for="tel" class="form-label">Email</label>
+                           <input type="text" id="EmailCoyugue" class="form-control" />
+                         </div>
+                        </div>
             </div>
                  <button type="submit" class="btn btn-primary mt-5 mb-4">Pasar a PDF</button>
           </form>

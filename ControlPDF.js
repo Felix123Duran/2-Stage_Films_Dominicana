@@ -182,7 +182,35 @@ window.addEventListener('load', async () => {
       let No_CuentasGarante3 = document.getElementById('No_CuentasGarante3').value;
       let BancoGarante3 = document.getElementById('BancoGarante3').value;
 
-      //datos conyugue
+      //datos conyugue si es empleador
+      let empreza_nombregARANTE = document.getElementById('empreza_nombregARANTE').value;
+      let codigo_empleadoGarante = document.getElementById('codigo_empleadoGarante').value;
+      let direccion_tuEGarante = document.getElementById('direccion_tuEGarante').value;
+      let tel_TrabajoGarante = document.getElementById('tel_TrabajoGarante').value;
+      let email_trabajo_Garante = document.getElementById('email_trabajo_Garante').value;
+      let tiemp_emprezaGarante = document.getElementById('tiemp_emprezaGarante').value;
+
+//datos conyugue si es empleado
+      let empreza_contratoGarante = document.getElementById('empreza_contratoGarante').value;
+      let cargo_emprezaGarante = document.getElementById('cargo_emprezaGarante').value;
+      let direccion_eGaranteE = document.getElementById('direccion_eGaranteE').value;
+      let Tiempo_servicioGarante = document.getElementById('Tiempo_servicioGarante').value;
+      let saldo_mensualGarante = document.getElementById('saldo_mensualGarante').value;
+      let tel_emprezaGarante = document.getElementById('tel_emprezaGarante').value;
+      let EMAILemprezaGarante = document.getElementById('EMAILemprezaGarante').value;
+
+      //Garante datos
+      let garanteParentes = document.getElementById('garanteParentes').value;
+      let Nombre_apelliGarante = document.getElementById('Nombre_apelliGarante').value;
+      let cedulaCony = document.getElementById('cedulaCony').value;
+      let emprezaCony = document.getElementById('emprezaCony').value;
+      let sueldoCony = document.getElementById('sueldoCony').value;
+      let DireccionConyugeTrabajo = document.getElementById('DireccionConyugeTrabajo').value;
+      let CargoTrabajoCony = document.getElementById('CargoTrabajoCony').value;
+      let tiempoServiciocony = document.getElementById('tiempoServiciocony').value;
+      let telTrabacoGarantee = document.getElementById('telTrabacoGarantee').value;
+      let EmailCoyugue = document.getElementById('EmailCoyugue').value;
+
       
       generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
         nombre2,Nombre_fam,Parentesco_fam,Direcion_fam,tel_fam,Nombre_fam2,parentesco_fam2,Direcion_fam2,tel_fam2,Nombre_fam3,parentesco_fam3,Direcion_fam3,tel_fam3
@@ -190,7 +218,9 @@ window.addEventListener('load', async () => {
         Tipo_Cuenta,Tipo_Cuenta2,Tipo_Cuenta3,No_Cuentas,Banco,No_Cuentas2,Banco2,Banco3,No_Cuentas3,
         nombreGarante,GaranteApodo,CedulaGarante,GaranteNacionalidad,eCivil_garante,edadGarante,OcupacionGarante,gEducacionGarante,dependientes_Garante,sueldoMenGarante,otrosIngre_garante,viviendaGarante,PagoMenGarante,añoViviendaGarante,direccionGarante,sectorGarante,telGarante,celularGarante,propio_alquiladoGarante,marcaGarante,modeloGarante,año_carroGarante,Nombre_famgarante,Parentesco_famgarante,Direcion_famgarante,tel_famgarante,Nombre_fam2garante,Parentesco_fam2garante,Direcion_fam2garante,tel_fam2garante,Nombre_fam3garante,Parentesco_fam3garante,Direcion_fam3garante,tel_fam3garante,
         nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
-        Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3);
+        Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3,
+        empreza_nombregARANTE,codigo_empleadoGarante,direccion_tuEGarante,tel_TrabajoGarante,email_trabajo_Garante,tiemp_emprezaGarante,empreza_contratoGarante,cargo_emprezaGarante,direccion_eGaranteE,Tiempo_servicioGarante,saldo_mensualGarante,tel_emprezaGarante,EMAILemprezaGarante,
+        garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue);
   })
 
 });
@@ -201,7 +231,9 @@ async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducaci
     Tipo_Cuenta,Tipo_Cuenta2,Tipo_Cuenta3,No_Cuentas,Banco,No_Cuentas2,Banco2,Banco3,No_Cuentas3,
     nombreGarante,GaranteApodo,CedulaGarante,GaranteNacionalidad,eCivil_garante,edadGarante,OcupacionGarante,gEducacionGarante,dependientes_Garante,sueldoMenGarante,otrosIngre_garante,viviendaGarante,PagoMenGarante,añoViviendaGarante,direccionGarante,sectorGarante,telGarante,celularGarante,propio_alquiladoGarante,marcaGarante,modeloGarante,año_carroGarante,Nombre_famgarante,Parentesco_famgarante,Direcion_famgarante,tel_famgarante,Nombre_fam2garante,Parentesco_fam2garante,Direcion_fam2garante,tel_fam2garante,Nombre_fam3garante,Parentesco_fam3garante,Direcion_fam3garante,tel_fam3garante,
     nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
-    Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3) {
+    Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3,
+    empreza_nombregARANTE,codigo_empleadoGarante,direccion_tuEGarante,tel_TrabajoGarante,email_trabajo_Garante,tiemp_emprezaGarante,empreza_contratoGarante,cargo_emprezaGarante,direccion_eGaranteE,Tiempo_servicioGarante,saldo_mensualGarante,tel_emprezaGarante,EMAILemprezaGarante,
+    garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue) {
   const image = await loadImage("page01.jpg");
 
   const pdf = new jsPDF('p', 'pt', 'letter');
@@ -425,8 +457,36 @@ pdf.text(email_cony,320 ,727);//
   pdf.text(No_CuentasGarante3, 160, 257);//
   pdf.text(BancoGarante3, 417, 257);//
 
+//Datos conyugue pagina 03
+  pdf.text(empreza_nombregARANTE, 230, 297);//
+  pdf.text(codigo_empleadoGarante, 497, 297);//
+  pdf.text(direccion_tuEGarante, 90, 325);//
+  pdf.text(tel_TrabajoGarante, 60, 354);//
+  pdf.text(email_trabajo_Garante, 210, 354);//
+  pdf.text(tiemp_emprezaGarante, 507, 354);//
 
+  //Si es empleado
+  pdf.text(empreza_contratoGarante, 222,383 );//
+  pdf.text(direccion_eGaranteE, 86,409 );//
+  pdf.text(cargo_emprezaGarante, 75,436 );//
+  pdf.text(Tiempo_servicioGarante, 305,436 );//
+  pdf.text(saldo_mensualGarante, 475,436 );//
+  pdf.text(tel_emprezaGarante, 60,467 );//
+  pdf.text(EMAILemprezaGarante, 320,467 );//
 
+  //Garante pagina 03
+  pdf.text(garanteParentes, 210,494 );//
+  pdf.text(Nombre_apelliGarante, 160,521 );//
+  pdf.text(cedulaCony, 420,521 );//
+  pdf.text(emprezaCony, 190,548 );//
+  pdf.text(sueldoCony, 477,550 );//
+  pdf.text(DireccionConyugeTrabajo, 85,576 );//
+  pdf.text(CargoTrabajoCony, 75,607 );//
+  pdf.text(tiempoServiciocony, 360,607 );//
+  pdf.text(telTrabacoGarantee, 60,633 );//
+  pdf.text(EmailCoyugue, 320,633 );//
+
+  
   pdf.save("example.pdf");
 
 }
