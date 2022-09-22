@@ -214,6 +214,9 @@ window.addEventListener('load', async () => {
       //Ultima tabla pagina #03
       let datosGarantia = document.querySelector('input[name="datosGarantia"]:checked').value;
       let desc_garantia = document.getElementById('desc_garantia').value;
+      //Pagina 04
+      let MontoSolicitado = document.getElementById('MontoSolicitado').value;
+      let Plazo = document.getElementById('Plazo').value;
 
       
       generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducacion,ocupacion,dependientes,vivienda,añoVivienda,direccion,sector,tel_recidencia,Celular,propio_alquilado,marca,modelo,año_carro,empreza_nombre,codigo_empleado,direccion_tuE,tel,email,tiemp_empreza,empreza_contrato,direccion_e,cargo,saldo_mensual,tel_empreza,EMAIL,nombre_apellido_cony,cédula_cony,nombre_emp_cony,sul_men_cony,Dirección_cony,cargo_cony,tiemp_serv_cony,tel_cony,email_cony,
@@ -224,7 +227,8 @@ window.addEventListener('load', async () => {
         nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
         Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3,
         empreza_nombregARANTE,codigo_empleadoGarante,direccion_tuEGarante,tel_TrabajoGarante,email_trabajo_Garante,tiemp_emprezaGarante,empreza_contratoGarante,cargo_emprezaGarante,direccion_eGaranteE,Tiempo_servicioGarante,saldo_mensualGarante,tel_emprezaGarante,EMAILemprezaGarante,
-        garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue,datosGarantia,desc_garantia);
+        garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue,datosGarantia,desc_garantia,
+        MontoSolicitado,Plazo);
   })
 
 });
@@ -237,7 +241,8 @@ async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducaci
     nombre3,Nombre_apellido_PrestamoGarante,FechaPrestamoGarante,Monto_prestadoGarante,pago_mensualPrestamoGarante,fecha_VencimientoPrestamoGarante,Nombre_apellido_PrestamoGarante2,Nombre_apellido_PrestamoGarante3,FechaPrestamoGarante2,Monto_prestadoGarante2,pago_mensualPrestamoGarante2,fecha_VencimientoPrestamoGarante2,FechaPrestamoGarante3,Monto_prestadoGarante3,pago_mensualPrestamoGarante3,fecha_VencimientoPrestamoGarante3,
     Tipo_CuentaGarante,Tipo_CuentaGarante2,Tipo_CuentaGarante3,No_CuentasGarante,BancoGarante,No_CuentasGarante2,BancoGarante2,No_CuentasGarante3,BancoGarante3,
     empreza_nombregARANTE,codigo_empleadoGarante,direccion_tuEGarante,tel_TrabajoGarante,email_trabajo_Garante,tiemp_emprezaGarante,empreza_contratoGarante,cargo_emprezaGarante,direccion_eGaranteE,Tiempo_servicioGarante,saldo_mensualGarante,tel_emprezaGarante,EMAILemprezaGarante,
-    garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue,datosGarantia,desc_garantia) {
+    garanteParentes,Nombre_apelliGarante,cedulaCony,emprezaCony,sueldoCony,DireccionConyugeTrabajo,CargoTrabajoCony,tiempoServiciocony,telTrabacoGarantee,EmailCoyugue,datosGarantia,desc_garantia,
+    MontoSolicitado,Plazo) {
   const image = await loadImage("page01.jpg");
 
   const pdf = new jsPDF('p', 'pt', 'letter');
@@ -254,6 +259,9 @@ async function generatePDF(nombre,apodo,cedula,nacionalidad,eCivil,edad,gEducaci
   pdf.text(date.getUTCFullYear().toString(), 115, 136);
 
   pdf.setFontSize(10);
+//Primeros datos segun el PDF
+pdf.text(MontoSolicitado, 335, 136);//
+pdf.text(Plazo, 460, 136);//
   //datos solicitante
   pdf.text(nombre, 120, 220);//
   pdf.text(apodo, 460, 220);//
